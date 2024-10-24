@@ -1,0 +1,57 @@
+*{
+    box-sizing: border-box;
+    font-family:Verdana, Geneva, Tahoma, sans-serif, sans-serif;
+    font-weight: 10;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+
+    padding-left: 20px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+
+
+.list{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 1.2rem;
+    list-style: none;
+}
+
+.knapp{
+    background-color: rgb(160, 233, 160);
+    border: 0px;
+    border-radius: 50%;
+    padding: 0px 5px 0px 5px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+#textRuta{
+    border-radius: 10px;
+    border: 1px solid;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+
+input[type="checkbox"]{
+    transform: scale(2); 
+    margin-right: 15px;
+    margin-left: -15px;
+    margin-top: 15px;
+}
+
+.completed{
+    text-decoration: line-through;
+}
