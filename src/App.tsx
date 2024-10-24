@@ -15,12 +15,16 @@ const App: React.FC = () => {
           text: newItemText,
           completed: false,
         };
-        setItems([...items, newItem])
+        setItems([...items, newItem]);
       }
+      const removeItem = (id: string) => {
+        setItems(items.filter(item => item.id !== id));
+      }
+
   return (
     <main>
-    <h1>BEPPES TODO</h1>       
-    <Todos items={items} />
+    <h1>MADDE'S TODOS:</h1>       
+    <Todos items={items} removeItem={removeItem}/>
     <Input addItem={addItem}/>
     </main>
   )

@@ -4,7 +4,7 @@ import { TodosProps } from "./types"
 
 
 
-const Todos: React.FC<TodosProps> = ({ items }) => {
+const Todos: React.FC<TodosProps> = ({ items, removeItem }) => {
     const [done, setDone] = useState<boolean[]> (items.map(() => false)); 
                                                      
     useEffect(() => {
@@ -20,7 +20,6 @@ const Todos: React.FC<TodosProps> = ({ items }) => {
         return newDone
     }) 
 }
-
     
     return(
                                                            
@@ -29,9 +28,11 @@ const Todos: React.FC<TodosProps> = ({ items }) => {
         <ListItem 
         key={item.id}
         item={item} 
-        done={done} 
+        done={done[index]} 
         index={index} 
-        toggleDone={toggleDone}/>))}</ul>
+        toggleDone={toggleDone}
+        removeItem={removeItem}
+        />))}</ul>
         </>
     )
 }                          

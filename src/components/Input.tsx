@@ -8,18 +8,13 @@ const Input: React.FC<InputProps> = ({ addItem }) => {
               
     return (                                
         <section>
-
-
-                <input type="text" 
+             <input type="text" 
                 id="textRuta" 
                 placeholder="Lägg till ny todo.." 
                 value={task} 
-                    onChange={(e:ChangeEvent<HTMLInputElement>) => setTask(e.target.value)}/>
-                <button className="knapp" onClick={() => {
-                    if (task.trim()){
-                        addItem(task);
-                        setTask('')}
-                        }}>+</button>
+                onChange={(e:ChangeEvent<HTMLInputElement>) => setTask(e.target.value)}/>
+                    <button className="knapp" onClick={() => {
+                    if (task.trim()){addItem(task);setTask('')}}}>+</button>
 
         </section>
     )

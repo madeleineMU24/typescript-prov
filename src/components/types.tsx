@@ -12,14 +12,16 @@ export type InputProps = {
 
 export type TodosProps = {
     items:Todo[]
+    removeItem: (id: string) => void;
 }
           
 
 export type ListItemProps = {
     item: Todo;
-    done: boolean[];
+    done: boolean;
     index: number;
-    toggleDone: (index: number) => void;           
+    toggleDone: (index: number) => void;  
+    removeItem: (id: string) => void;         
 }
 
 
